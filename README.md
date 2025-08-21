@@ -1,20 +1,31 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+Library Services Kiosk
+An interactive, multi-lingual kiosk application designed to guide library patrons through the process of printing, photocopying, and scanning. This project is built with pure HTML, CSS, and vanilla JavaScript, with no external frameworks.
 
-# Run and deploy your AI Studio app
+Features
+Step-by-Step Guidance: A user-friendly wizard interface that walks users through a series of questions based on a detailed flowchart.
 
-This contains everything you need to run your app locally.
+Dynamic Cost Calculation: Automatically calculates the cost of printing and photocopying based on user selections for page count, paper size, and colour.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1n295M6r4p_n_YP3s6koQRzdiwLtDhk96
+Multi-Language Support: Includes a language selector with full translations for English, Mandarin, Cantonese, Nepali, Italian, and Greek.
 
-## Run Locally
+Complex Logic Paths: Accurately handles various user scenarios, such as having a library card, sufficient credit, and different printing sources (Library PC, USB, Personal Device).
 
-**Prerequisites:**  Node.js
+Modern UI/UX: A clean, responsive design that works on any screen size, complete with a progress bar and intuitive navigation.
 
+Informational Modals: Provides users with easy access to price lists via pop-up modals.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Tech Stack
+HTML5: For the structure and content of the application.
+
+CSS3: For all styling, including a modern colour palette, custom fonts, and responsive layout using Flexbox.
+
+Vanilla JavaScript (ES6+): For all the application logic, including state management, dynamic content updates, and event handling.
+
+How to Use
+Clone the repository to your local machine.
+
+Open the index.html file in any modern web browser.
+
+The application is fully self-contained and requires no build steps or dependencies.
+
+This project was developed to provide a clear and accessible digital alternative to a physical flowchart, improving the user experience for library patrons with diverse needs.
