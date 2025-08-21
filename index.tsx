@@ -1,17 +1,14 @@
-
 // --- STATE MANAGEMENT ---
-interface UserSelections {
+const userSelections: {
     service: string | null;
-    pages: number | 'unknown';
+    pages: number | string;
     size: string | null;
     color: string | null;
     hasCard: string | null;
     hasCredit: string | null;
     printSource: string | null;
     hasUSB: string | null;
-}
-
-const userSelections: UserSelections = {
+} = {
     service: null,
     pages: 1,
     size: null,
@@ -25,34 +22,34 @@ const userSelections: UserSelections = {
 let stepHistory: string[] = [];
 
 // --- DOM ELEMENT REFERENCES ---
-const steps: NodeListOf<HTMLElement> = document.querySelectorAll('.step');
+const steps = document.querySelectorAll('.step');
 const progressBarContainer = document.querySelector('.progress-bar-container') as HTMLElement;
 const progressBar = document.getElementById('progress-bar') as HTMLElement;
 const appContainer = document.querySelector('.app-container') as HTMLElement;
-const unsurePagesBtn = document.getElementById('unsure-pages') as HTMLButtonElement;
+const unsurePagesBtn = document.getElementById('unsure-pages') as HTMLElement;
 const priceModal = document.getElementById('price-modal') as HTMLElement;
 const priceHelpIcon = document.getElementById('price-help-icon') as HTMLElement;
-const modalCloseBtn = document.getElementById('modal-close-btn') as HTMLButtonElement;
+const modalCloseBtn = document.getElementById('modal-close-btn') as HTMLElement;
 const finalTitleEl = document.getElementById('final-title') as HTMLElement;
 const finalMessageEl = document.getElementById('final-message') as HTMLElement;
 const navContainer = document.querySelector('.navigation-buttons') as HTMLElement;
-const backBtn = document.getElementById('back-btn') as HTMLButtonElement;
-const restartBtn = document.getElementById('restart-btn') as HTMLButtonElement;
-const skipBtn = document.getElementById('skip-btn') as HTMLButtonElement;
+const backBtn = document.getElementById('back-btn') as HTMLElement;
+const restartBtn = document.getElementById('restart-btn') as HTMLElement;
+const skipBtn = document.getElementById('skip-btn') as HTMLElement;
 const costConfirmationTitleEl = document.getElementById('cost-confirmation-title') as HTMLElement;
 const costDisplayEl = document.getElementById('cost-display') as HTMLElement;
 const pagesTitleEl = document.getElementById('pages-title') as HTMLElement;
 const scanPriceModal = document.getElementById('scan-price-modal') as HTMLElement;
 const scanHelpIcon = document.getElementById('scan-help-icon') as HTMLElement;
-const scanModalCloseBtn = document.getElementById('scan-modal-close-btn') as HTMLButtonElement;
+const scanModalCloseBtn = document.getElementById('scan-modal-close-btn') as HTMLElement;
 const pageCountInput = document.getElementById('page-count') as HTMLInputElement;
-const minusBtn = document.getElementById('minus-btn') as HTMLButtonElement;
-const plusBtn = document.getElementById('plus-btn') as HTMLButtonElement;
-const langButtons: NodeListOf<HTMLButtonElement> = document.querySelectorAll('.lang-btn');
+const minusBtn = document.getElementById('minus-btn') as HTMLElement;
+const plusBtn = document.getElementById('plus-btn') as HTMLElement;
+const langButtons = document.querySelectorAll('.lang-btn');
 
 
 // --- TRANSLATION LOGIC ---
-const translations: { [key: string]: { [key: string]: string } } = {
+const translations = {
     'en': {
         main_title: 'Print, Copy, Scan',
         select_language: 'Select your language',
@@ -399,9 +396,10 @@ const translations: { [key: string]: { [key: string]: string } } = {
 
 function translatePage(lang: string) {
     document.querySelectorAll('[data-translate]').forEach(el => {
-        const key = (el as HTMLElement).dataset.translate;
+        const htmlEl = el as HTMLElement;
+        const key = htmlEl.dataset.translate;
         if (key && translations[lang] && translations[lang][key]) {
-            el.innerHTML = translations[lang][key];
+            htmlEl.innerHTML = translations[lang][key];
         }
     });
 }
@@ -484,7 +482,7 @@ function showStep(stepId: string, isBack = false) {
     backBtn.style.visibility = stepHistory.length > 0 ? 'visible' : 'hidden';
     updateProgressBar();
     // Re-apply translation to the new visible elements
-    const currentLangEl = document.querySelector('.lang-btn.active') as HTMLElement | null;
+    const currentLangEl = document.querySelector('.lang-btn.active') as HTMLElement;
     if (currentLangEl && currentLangEl.dataset.lang) {
       translatePage(currentLangEl.dataset.lang);
     }
@@ -549,7 +547,7 @@ function skipToEnd() {
     }
 }
 
-function calculateCost(): number {
+function calculateCost() {
     const rates = {
         print_copy: {
             A4: { bw: 0.40, color: 0.80 },
@@ -567,7 +565,7 @@ function calculateCost(): number {
         const rate = rates.scan.A4.bw; // Since size is skipped, default to A4
         return userSelections.pages * rate;
     } else if (userSelections.size && userSelections.color) {
-        const rate = rates.print_copy[userSelections.size as 'A4' | 'A3'][userSelections.color as 'bw' | 'color'];
+        const rate = rates.print_copy[userSelections.size][userSelections.color];
         return userSelections.pages * rate;
     }
     return 0;
@@ -612,7 +610,7 @@ function displayFinalMessage() {
             }
         }
     }
-    const currentLangEl = document.querySelector('.lang-btn.active') as HTMLElement | null;
+    const currentLangEl = document.querySelector('.lang-btn.active') as HTMLElement;
     const currentLang = (currentLangEl && currentLangEl.dataset.lang) || 'en';
     finalTitleEl.innerHTML = translations[currentLang][titleKey];
     finalMessageEl.innerHTML = translations[currentLang][messageKey];
@@ -758,7 +756,7 @@ langButtons.forEach(button => {
     button.addEventListener('click', () => {
         langButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
-        const selectedLang = button.dataset.lang;
+        const selectedLang = (button as HTMLElement).dataset.lang;
         if (selectedLang) {
           translatePage(selectedLang);
         }
