@@ -34,11 +34,11 @@
 
             <div class="app-container">
                 <div id="step-service" class="step active">
-                    <h2>What would you like to do today?</h2>
+                    <h2 data-translate="what_to_do">What would you like to do today?</h2>
                     <div class="button-group">
-                        <button class="btn" data-service="printing">Printing</button>
-                        <button class="btn" data-service="photocopying">Photocopying</button>
-                        <button class="btn" data-service="scanning">Scanning</button>
+                        <button class="btn" data-service="printing" data-translate="printing">Printing</button>
+                        <button class="btn" data-service="photocopying" data-translate="photocopying">Photocopying</button>
+                        <button class="btn" data-service="scanning" data-translate="scanning">Scanning</button>
                     </div>
                 </div>
                 
@@ -48,17 +48,17 @@
 
                 <!-- Step: USB Check for Scanning -->
                 <div id="step-usb-check" class="step">
-                    <h2>Do you have a USB drive?</h2>
+                    <h2 data-translate="has_usb">Do you have a USB drive?</h2>
                     <div class="button-group">
-                        <button class="btn" data-has-usb="yes">Yes</button>
-                        <button class="btn" data-has-usb="no">No</button>
+                        <button class="btn" data-has-usb="yes" data-translate="yes">Yes</button>
+                        <button class="btn" data-has-usb="no" data-translate="no">No</button>
                     </div>
                 </div>
 
                 <!-- Step: No USB Message -->
                 <div id="step-no-usb" class="step">
-                    <h2>Our printers can only scan to USB, not to your email address.</h2>
-                    <p style="text-align: center;">See a staff member to purchase a USB drive.</p>
+                    <h2 data-translate="no_usb_title">Our printers can only scan to USB, not to your email address.</h2>
+                    <p style="text-align: center;" data-translate="no_usb_body">See a staff member to purchase a USB drive.</p>
                 </div>
 
                 <!-- Step 2: Page Count (for all services) -->
@@ -78,7 +78,7 @@
 
                 <!-- Step 3: Paper Size (for all services) -->
                 <div id="step-size" class="step">
-                    <h2>What size paper do you require?</h2>
+                    <h2 data-translate="paper_size">What size paper do you require?</h2>
                     <div class="button-group">
                         <button class="btn" data-size="A4">A4</button>
                         <button class="btn" data-size="A3">A3</button>
@@ -87,7 +87,7 @@
 
                 <!-- EDITED Step 4: Colour Choice (for Printing/Photocopying only) -->
                 <div id="step-color" class="step">
-                    <h2>Which colour do you require?</h2>
+                    <h2 data-translate="color_choice">Which colour do you require?</h2>
                     <div class="button-group">
                         <button class="btn" data-color="color" data-translate="color">Colour</button>
                         <button class="btn" data-color="bw" data-translate="bw">Black & White</button>
