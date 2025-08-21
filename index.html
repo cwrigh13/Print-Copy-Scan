@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Services Kiosk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arial&family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+    <header class="header-full-width">
+        <img src="https://georgesriver.spydus.com/api/maintenance/1.0/imagebrowser/image?blobName=a31cf63f-7e24-41d5-b1f8-c206bde45ce6.png" alt="Georges River Libraries Logo" class="header-logo">
+    </header>
+
+    <main class="main-content">
+        <div class="content-wrapper">
+            <h1 class="header-title" data-translate="main_title">Print, Copy, Scan</h1>
+            
+            <div class="language-selector">
+                <h3 data-translate="select_language">Select your language</h3>
+                <div class="language-buttons">
+                    <button class="lang-btn active" data-lang="en">English</button>
+                    <button class="lang-btn" data-lang="zh-CN">普通话<span>Mandarin</span></button>
+                    <button class="lang-btn" data-lang="zh-HK">粤语<span>Cantonese</span></button>
+                    <button class="lang-btn" data-lang="ne">नेपाली<span>Nepali</span></button>
+                    <button class="lang-btn" data-lang="it">Italiano<span>Italian</span></button>
+                    <button class="lang-btn" data-lang="el">Ελληνικά<span>Greek</span></button>
+                </div>
+            </div>
+
+            <div class="app-container">
+                <div id="step-service" class="step active">
+                    <h2>What would you like to do today?</h2>
+                    <div class="button-group">
+                        <button class="btn" data-service="printing">Printing</button>
+                        <button class="btn" data-service="photocopying">Photocopying</button>
+                        <button class="btn" data-service="scanning">Scanning</button>
+                    </div>
+                </div>
+                
+                <div class="progress-bar-container">
+                    <div id="progress-bar"></div>
+                </div>
+
+                <!-- Step: USB Check for Scanning -->
+                <div id="step-usb-check" class="step">
+                    <h2>Do you have a USB drive?</h2>
+                    <div class="button-group">
+                        <button class="btn" data-has-usb="yes">Yes</button>
+                        <button class="btn" data-has-usb="no">No</button>
+                    </div>
+                </div>
+
+                <!-- Step: No USB Message -->
+                <div id="step-no-usb" class="step">
+                    <h2>Our printers can only scan to USB, not to your email address.</h2>
+                    <p style="text-align: center;">See a staff member to purchase a USB drive.</p>
+                </div>
+
+                <!-- Step 2: Page Count (for all services) -->
+                <div id="step-pages" class="step">
+                    <svg id="scan-help-icon" class="help-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                    <h2 id="pages-title" data-translate="how_many_pages">How many pages?</h2>
+                    <div class="input-group">
+                        <button class="quantity-btn" id="minus-btn">-</button>
+                        <input type="number" id="page-count" class="input-field" min="1" value="1" placeholder="e.g., 5">
+                        <button class="quantity-btn" id="plus-btn">+</button>
+                    </div>
+                    <div class="button-group">
+                        <button id="submit-pages" class="btn" data-translate="next">Next</button>
+                        <button id="unsure-pages" class="btn btn-secondary" data-translate="not_sure">I'm not sure</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Paper Size (for all services) -->
+                <div id="step-size" class="step">
+                    <h2>What size paper do you require?</h2>
+                    <div class="button-group">
+                        <button class="btn" data-size="A4">A4</button>
+                        <button class="btn" data-size="A3">A3</button>
+                    </div>
+                </div>
+
+                <!-- EDITED Step 4: Colour Choice (for Printing/Photocopying only) -->
+                <div id="step-color" class="step">
+                    <h2>Which colour do you require?</h2>
+                    <div class="button-group">
+                        <button class="btn" data-color="color" data-translate="color">Colour</button>
+                        <button class="btn" data-color="bw" data-translate="bw">Black & White</button>
+                    </div>
+                </div>
+
+                <!-- Step 5: Cost Confirmation -->
+                <div id="step-cost-confirmation" class="step">
+                    <svg id="price-help-icon" class="help-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                    <h2 id="cost-confirmation-title" data-translate="cost_title_print">Your printing will cost:</h2>
+                    <div id="cost-display"></div>
+                    <div class="button-group">
+                        <button class="btn" id="cost-confirmation-next" data-translate="next">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 6: Library Card Check -->
+                <div id="step-card-check" class="step">
+                    <h2 data-translate="has_card">Do you have a library card?</h2>
+                    <div class="button-group">
+                        <button class="btn" data-has-card="yes" data-translate="yes">Yes</button>
+                        <button class="btn" data-has-card="no" data-translate="no">No</button>
+                    </div>
+                </div>
+
+                <!-- Step 7: Credit Check (for Card Holders) -->
+                <div id="step-credit-check" class="step">
+                    <h2 data-translate="has_credit">Do you have enough credit?</h2>
+                    <div class="button-group">
+                        <button class="btn" data-has-credit="yes" data-translate="yes">Yes</button>
+                        <button class="btn" data-has-credit="no" data-translate="no">No</button>
+                        <button class="btn" data-has-credit="unknown" data-translate="not_sure">I'm not sure</button>
+                    </div>
+                </div>
+                
+                <!-- Step: Add Value -->
+                <div id="step-add-value" class="step">
+                    <h2 data-translate="add_value_title">Adding money to your library card</h2>
+                    <div class="instruction-list" data-translate="add_value_body"></div>
+                </div>
+
+                <!-- Step: How to Check Balance -->
+                <div id="step-how-to-check-balance" class="step">
+                    <h2 data-translate="check_balance_title">How to check your balance</h2>
+                    <div class="instruction-list" data-translate="check_balance_body"></div> <!-- Blank for now -->
+                </div>
+
+                <!-- Step 8: Print Source (for Printing with credit) -->
+                <div id="step-print-source" class="step">
+                    <h2 data-translate="print_source">Where are you printing from?</h2>
+                    <div class="button-group">
+                        <button class="btn" data-print-source="pc" data-translate="library_pc">Library PC</button>
+                        <button class="btn" data-print-source="quick-print-pc" data-translate="quick_print_pc">Quick Print PC</button>
+                        <button class="btn" data-print-source="usb" data-translate="usb_drive">USB Drive</button>
+                        <button class="btn" data-print-source="device" data-translate="personal_device">Personal Device (ie phone, laptop)</button>
+                    </div>
+                </div>
+                
+                <!-- Step 9: Final Message -->
+                <div id="step-final" class="step">
+                    <h2 id="final-title" data-translate="instructions">Instructions</h2>
+                    <div id="final-message" class="instruction-list"></div>
+                </div>
+
+                <!-- Universal Navigation Buttons -->
+                <div class="navigation-buttons">
+                    <button class="btn-nav" id="back-btn" data-translate="back">Back</button>
+                    <button class="btn-nav" id="restart-btn" data-translate="restart">Restart</button>
+                    <button class="btn-nav" id="skip-btn" data-translate="skip">Skip</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Price Modal -->
+    <div id="price-modal" class="modal">
+        <div class="modal-content">
+            <button id="modal-close-btn" class="modal-close">&times;</button>
+            <h2 data-translate="price_list">Price List</h2>
+            <ul class="price-list">
+                <li><span data-translate="price_a4_bw">A4 Black & White Print/Copy</span> <span class="price">$0.40</span></li>
+                <li><span data-translate="price_a3_bw">A3 Black & White Print/Copy</span> <span class="price">$0.70</span></li>
+                <li><span data-translate="price_a4_color">A4 Colour Print/Copy</span> <span class="price">$0.80</span></li>
+                <li><span data-translate="price_a3_color">A3 Colour Print/Copy</span> <span class="price">$1.40</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Scan Price Modal -->
+    <div id="scan-price-modal" class="modal">
+        <div class="modal-content">
+            <button id="scan-modal-close-btn" class="modal-close">&times;</button>
+            <h2 data-translate="scan_prices">Scanning Prices</h2>
+            <ul class="price-list">
+                <li><span data-translate="scan_a4">A4 Scan (per page)</span> <span class="price">$0.10</span></li>
+                <li><span data-translate="scan_a3">A3 Scan (per page)</span> <span class="price">$0.10</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <script type="module" src="index.tsx"></script>
+
+</body>
+</html>

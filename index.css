@@ -1,0 +1,380 @@
+/* --- Basic Setup & Typography --- */
+:root {
+    --primary-color: #00A5A5;
+    --primary-hover: #007582;
+    --secondary-color: #5DBFC0;
+    --secondary-hover: #9AD3D4;
+    --background-color: #F9FAFB;
+    --card-background: #ffffff;
+    --text-color: #007582;
+    --border-color: #C8E6E6;
+    --border-radius: 12px;
+    --box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    --transition-speed: 0.3s;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Header Styles --- */
+.header-full-width {
+    width: 100%;
+    background-color: #007582;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.header-logo {
+    width: 150px;
+    height: auto;
+}
+
+.main-content {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content-wrapper {
+    width: 100%;
+    max-width: 500px;
+}
+
+.header-title {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #007582;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* --- Language Selection Styles --- */
+.language-selector {
+    margin-bottom: 30px;
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px 35px;
+}
+.language-selector h3 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem; 
+    color: #007582;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+.language-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.lang-btn {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.lang-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+.lang-btn span {
+    display: block;
+    font-size: 0.8rem;
+    color: #777;
+}
+.lang-btn.active span {
+    color: white;
+}
+
+
+/* --- Main App Container --- */
+.app-container {
+    width: 100%;
+    position: relative;
+}
+
+/* --- Progress Bar --- */
+.progress-bar-container {
+    width: 100%;
+    background-color: var(--border-color);
+    border-radius: 20px;
+    height: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: var(--primary-color);
+    transition: width var(--transition-speed) ease-in-out;
+}
+
+/* --- Step Cards --- */
+.step {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px 35px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity var(--transition-speed) ease-out, transform var(--transition-speed) ease-out;
+    display: none;
+    text-align: center;
+    position: relative;
+}
+
+.step.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: left;
+}
+
+/* NEW: Instruction List Styles */
+.instruction-list {
+    text-align: left;
+    padding-left: 0;
+    font-size: 1rem;
+    list-style-position: inside;
+}
+.instruction-list li {
+    margin-bottom: 10px;
+}
+.instruction-list ol {
+    padding-left: 20px;
+}
+.instruction-list strong {
+    color: var(--primary-hover);
+}
+
+
+/* --- Buttons and Interactive Elements --- */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 16px 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-hover);
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.btn-nav {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--primary-hover);
+    padding: 10px 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    flex: 1;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.btn-nav:hover {
+    background-color: #f8f9fa;
+    border-color: #ccc;
+}
+
+
+/* --- Input Fields --- */
+.input-group {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.input-field {
+    width: 100px;
+    padding: 12px;
+    font-size: 1.2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.quantity-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+}
+.quantity-btn:hover {
+    background-color: var(--secondary-hover);
+}
+
+
+/* --- Cost Display --- */
+#cost-display {
+    margin-top: 25px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#cost-display span {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+/* --- Modal Styles --- */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-speed) ease, visibility var(--transition-speed) ease;
+    z-index: 1000;
+}
+
+.modal.modal-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    width: 90%;
+    max-width: 400px;
+    text-align: left;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #aaa;
+}
+.modal-close:hover {
+    color: #333;
+}
+
+.price-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.price-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+.price-list li:last-child {
+    border-bottom: none;
+}
+.price-list .price {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* --- Question Mark Icon --- */
+.help-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    color: #aaa;
+    transition: color var(--transition-speed) ease;
+}
+.help-icon:hover {
+    color: var(--primary-color);
+}
