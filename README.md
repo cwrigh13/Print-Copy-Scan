@@ -1,8 +1,12 @@
-# Print Copy Scan
 
-A user-friendly, multi-language, step-by-step kiosk interface designed to guide library patrons through printing, photocopying and scanning services. This application is a standalone frontend project built with HTML, CSS, and TypeScript, focusing on clarity, accessibility and ease of use.
+# Library Services Kiosk Interface
 
-## Features
+A user-friendly, multi-language, step-by-step kiosk interface designed to guide library patrons through printing, photocopying, and scanning services. This application is a standalone frontend project built with HTML, CSS, and TypeScript, focusing on clarity, accessibility, and ease of use.
+
+![Kiosk Interface Screenshot](https://i.imgur.com/example-screenshot.png) 
+*(Replace with an actual screenshot of the application)*
+
+## ✨ Features
 
 - **Guided User Flow:** Takes users through a simple, logical sequence of questions to determine their needs.
 - **Service Selection:** Clear options for Printing, Photocopying, and Scanning.
@@ -19,7 +23,7 @@ A user-friendly, multi-language, step-by-step kiosk interface designed to guide 
 - **Responsive Design:** Styled to be clear and legible on kiosk-sized touchscreens.
 - **Informational Modals:** Quick access to pricing information without leaving the current step.
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 This project is built with web-native technologies and requires no external frameworks or complex build steps.
 
@@ -27,8 +31,33 @@ This project is built with web-native technologies and requires no external fram
 - **CSS3:** For modern styling, animations, and responsive layout. Uses CSS variables for easy theming.
 - **TypeScript:** For the core application logic, state management, and DOM manipulation, providing type safety and improved readability.
 
+## 📂 Project Structure
 
-## Customization & Configuration
+```
+.
+├── index.html       # Main HTML file containing all UI steps and content structure.
+├── index.css        # All styles for the application.
+├── index.tsx        # All TypeScript logic for state, translations, and interactivity. (Embedded in index.html)
+└── metadata.json    # Project metadata.
+└── README.md        # This file.
+```
+
+## 🚀 Getting Started
+
+No complex setup is required to run this project.
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/library-kiosk.git
+    ```
+2.  **Navigate to the directory:**
+    ```bash
+    cd library-kiosk
+    ```
+3.  **Open the application:**
+    Simply open the `index.html` file in your preferred web browser. For best results and to avoid potential CORS issues with local file access in the future, it's recommended to use a simple local server extension like [Live Server for VS Code](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+
+## 🔧 Customization & Configuration
 
 This kiosk is designed to be easily adapted for other library systems.
 
@@ -62,4 +91,10 @@ The visual theme can be easily changed by modifying the CSS variables at the top
 }
 ```
 
+## 🤝 Contributing
 
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/your-username/library-kiosk/issues).
+
+## 📄 License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.

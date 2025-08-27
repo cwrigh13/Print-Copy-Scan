@@ -79,14 +79,19 @@ const translations = {
         add_value_title: 'Adding money to your library card',
         add_value_body: '<ol><li>Select <strong>Add Value</strong> at the Printing Kiosk</li><li>Scan your library card and enter your password</li><li>Select <strong>Next</strong></li><li>You can then add money either by <strong>EFTPOS</strong> or with <strong>cash</strong> (follow the instructions on the kiosk screen)</li></ol>',
         check_balance_title: 'How to check your balance',
-        check_balance_body: '',
+        check_balance_body: '<ol><li>Select <strong>Check Balance</strong>.</li><li>Scan your library card or type in your card number and PIN.</li><li>The screen will display your current credit balance.</li></ol>',
         print_source: 'Where are you printing from?',
         library_pc: 'Library PC',
         quick_print_pc: 'Quick Print PC',
         usb_drive: 'USB Drive',
         personal_device: 'Personal Device (ie phone, laptop)',
         instructions: 'Instructions',
+        instructions_photocopying: 'How to use the photocopier',
         instructions_scanning: 'Instructions for scanning',
+        instructions_printing_pc: 'How to print from a library PC',
+        instructions_printing_usb: 'How to print from a USB Drive',
+        instructions_printing_quick_print_pc: 'How to print from a Quick Print PC',
+        instructions_printing_device: 'How to print from your Personal Device',
         back: 'Back',
         restart: 'Restart',
         skip: 'Skip',
@@ -105,7 +110,9 @@ const translations = {
         final_scanning_ok: "<ol><li>Sign in to the printer:<ol><li>Scan your library card or guest ticket barcode</li><li>If you are using your library card, enter your password (tap the <strong>password field</strong>, tap the <strong>keyboard icon</strong>, type your <strong>password</strong>, and tap <strong>OK</strong> twice)</li></ol></li><li>Choose <strong>Use Copier</strong></li><li><strong>Insert your USB</strong> into the port on the right side of the printer. Wait a few seconds.</li><li>Select <strong>Save a document to external memory</strong> (If this option doesn't appear, tap the USB icon in the top-right of the screen)</li><li>Place your document face down on the <strong>glass</strong>, or face up in the <strong>top feeder</strong></li><li>Change any <strong>settings</strong> on the screen</li><li>Press the <strong>Start button</strong><ol><li>If using the glass, to scan another page to the same file, place the next page on the glass, press <strong>Start</strong>, and repeat until all pages are scanned</li></ol></li><li>After the last page, press <strong>Finish</strong>, and press the <strong>Start button</strong> again to save the file to your USB</li><li>Press the Access button on the printer and select <strong>Log out</strong> at the top-right of the screen</li><li>Take your <strong>USB</strong> and <strong>original documents</strong> with you</li></ol>",
         final_printing_pc: "<ol><li>Save or download the documents that you want to print</li><li>Click <strong>Managed Bookmarks</strong> in the top-left corner of the web browser. Select <strong>Print Files</strong>.</li><li>Select either <strong>Library Card Number/Password</strong> or <strong>Guest Ticket Number</strong>.</li><li>Enter your library card number and password, or enter your guest ticket number, <strong>Continue</strong>, and use password “<strong>GUEST</strong>”. Click <strong>Log In</strong>.</li><li>Click <strong>Select Files</strong>, go to the folder where they are saved, select the file/s, and click <strong>Open</strong>.</li><li>To change the settings print settings, click the document once, and click <strong>Change Job Attributes</strong>.</li><li>When your files are ready to print, the <strong>Status</strong> column will say “<strong>Waiting for release</strong>”. Check the total printing costs and your balance. Add more money if needed.</li><li>Sign in to any library printer. If you are using your library card, enter your password (tap the <strong>password field</strong>, tap the <strong>keyboard icon</strong>, enter your password, and tap <strong>OK</strong> twice).</li><li>Select <strong>My Print Jobs</strong>.</li><li>Select the jobs that you would like to print.</li><li>Select <strong>Print</strong>.</li><li><strong>Log Out</strong> when you are finished.</li></ol>",
         final_printing_usb: "<ol><li>Sign in to the printer:<ol><li>Scan your library card or guest ticket barcode</li><li>If you are using your library card, enter your password (tap the <strong>password field</strong>, tap the <strong>keyboard icon</strong>, type your <strong>password</strong>, and tap <strong>OK</strong> twice)</li></ol></li><li>Choose <strong>Use Copier</strong></li><li><strong>Insert your USB</strong> into the port on the right side of the printer. Wait a few seconds.</li><li>Select <strong>Print a document from external memory</strong> (If this option doesn't appear, tap the <strong>USB</strong> icon in the top-right corner of the screen)</li><li>Select the files that you want to print</li><li>Select <strong>Print</strong> and <strong>OK</strong></li><li>Adjust any print settings</li><li>Press the <strong>Start button</strong> to print</li><li>To log out, press the <strong>Access button</strong> on the printer, and <strong>Log Out</strong> on the screen</li><li>Remember to take your USB</li></ol>",
-        final_printing_device: "Please use the 'Quick Print' service to email your document to the print queue, then release it from any printer.",
+        final_printing_quick_print_pc_body: "<ol><li>On the Quick Print PC, open the web browser. The homepage is the print portal.</li><li>Select either <strong>Library Card Number/Password</strong> or <strong>Guest Ticket Number</strong> to log in.</li><li>Enter your details and log in. For guest tickets, the password is “<strong>GUEST</strong>”.</li><li>Click <strong>Select Files</strong> to find and upload the document you want to print.</li><li>Once uploaded, the status will show “<strong>Waiting for release</strong>”.</li><li>Go to any library printer and sign in to release your print job.</li></ol>",
+        final_printing_device_bw_body: '<ol><li>From your device, open your email application.</li><li>Create a new email addressed to <strong>grl.print@spydus.com</strong>. The subject line can be left blank.</li><li>Attach the document you wish to print. Most common file types are supported (PDF, DOCX, JPG, etc.).</li><li>Send the email. You will receive a confirmation email shortly.</li><li>Go to any library printer and sign in to release your print job. It will be printed in <strong>Black & White</strong>.</li></ol>',
+        final_printing_device_color_body: '<ol><li>From your device, open your email application.</li><li>Create a new email addressed to <strong>grl.print.colour@spydus.com</strong>. The subject line can be left blank.</li><li>Attach the document you wish to print. Most common file types are supported (PDF, DOCX, JPG, etc.).</li><li>Send the email. You will receive a confirmation email shortly.</li><li>Go to any library printer and sign in to release your print job. It will be printed in <strong>Colour</strong>.</li></ol>',
         final_printing_unknown: "You have enough credit. Please proceed to a library printer to complete your printing job.",
     },
     'zh-CN': {
@@ -137,14 +144,19 @@ const translations = {
         add_value_title: '为您的图书卡充值',
         add_value_body: '<ol><li>在打印亭选择<strong>充值</strong></li><li>扫描您的图书卡并输入密码</li><li>选择<strong>下一步</strong></li><li>您可以通过<strong>EFTPOS</strong>或<strong>现金</strong>充值（按照亭屏幕上的说明操作）</li></ol>',
         check_balance_title: '如何查询余额',
-        check_balance_body: '',
+        check_balance_body: '<ol><li>选择<strong>查询余额</strong>。</li><li>扫描您的图书卡或输入您的卡号和密码。</li><li>屏幕将显示您当前的信用余额。</li></ol>',
         print_source: '您从哪里打印？',
         library_pc: '图书馆电脑',
         quick_print_pc: '快速打印电脑',
         usb_drive: 'USB驱动器',
         personal_device: '个人设备（如手机、笔记本电脑）',
         instructions: '说明',
+        instructions_photocopying: '如何使用复印机',
         instructions_scanning: '扫描说明',
+        instructions_printing_pc: '如何从图书馆电脑打印',
+        instructions_printing_usb: '如何从USB驱动器打印',
+        instructions_printing_quick_print_pc: '如何从快速打印电脑打印',
+        instructions_printing_device: '如何从您的个人设备打印',
         back: '返回',
         restart: '重新开始',
         skip: '跳过',
@@ -163,7 +175,9 @@ const translations = {
         final_scanning_ok: "<ol><li>登入打印机：<ol><li>扫描您的图书卡或访客票条形码</li><li>如果您使用图书卡，请输入密码（点击<strong>密码字段</strong>，点击<strong>键盘图标</strong>，输入<strong>密码</strong>，然后点击两次<strong>确定</strong>）</li></ol></li><li>选择<strong>使用复印机</strong></li><li><strong>将USB插入</strong>打印机右侧的端口。请稍候。</li><li>选择<strong>将文件保存到外部存储器</strong>（如果此选项未出现，请点击屏幕右上角的USB图标）</li><li>将文件正面朝下放在<strong>玻璃板</strong>上，或正面朝上放在<strong>顶部进纸器</strong>中</li><li>更改屏幕上的任何<strong>设置</strong></li><li>按下<strong>开始按钮</strong><ol><li>如果使用玻璃板，要将另一页扫描到同一文件，请将下一页放在玻璃板上，按<strong>开始</strong>，然后重复直到所有页面都扫描完毕</li></ol></li><li>扫描完最后一页后，按<strong>完成</strong>，然后再次按<strong>开始按钮</strong>将文件保存到USB</li><li>按下打印机上的访问按钮，并选择屏幕右上角的<strong>注销</strong></li><li>带上您的<strong>USB</strong>和<strong>原始文件</strong></li></ol>",
         final_printing_pc: "请使用图书馆电脑将您的文件发送到打印队列，然后从任何一台打印机上释放。",
         final_printing_usb: "请将您的USB驱动器插入打印机，并按照屏幕上的说明打印您的文件。",
-        final_printing_device: "请使用“快速打印”服务将您的文件通过电子邮件发送到打印队列，然后从任何一台打印机上释放。",
+        final_printing_quick_print_pc_body: "<ol><li>在快速打印电脑上，打开网页浏览器。主页就是打印门户。</li><li>选择<strong>图书卡号/密码</strong>或<strong>访客票号</strong>登录。</li><li>输入您的详细信息并登录。对于访客票，密码是“<strong>GUEST</strong>”。</li><li>点击<strong>选择文件</strong>查找并上传您要打印的文件。</li><li>上传后，状态将显示为“<strong>等待释放</strong>”。</li><li>前往任何一台图书馆打印机并登录以释放您的打印作业。</li></ol>",
+        final_printing_device_bw_body: '<ol><li>在您的设备上，打开您的电子邮件应用程序。</li><li>创建一封新邮件，收件人为<strong>grl.print@spydus.com</strong>。主题行可以留空。</li><li>附加您要打印的文件。支持大多数常见文件类型（PDF、DOCX、JPG等）。</li><li>发送电子邮件。您很快会收到一封确认邮件。</li><li>前往任何一台图书馆打印机并登录以释放您的打印作业。它将以<strong>黑白</strong>打印。</li></ol>',
+        final_printing_device_color_body: '<ol><li>在您的设备上，打开您的电子邮件应用程序。</li><li>创建一封新邮件，收件人为<strong>grl.print.colour@spydus.com</strong>。主题行可以留空。</li><li>附加您要打印的文件。支持大多数常见文件类型（PDF、DOCX、JPG等）。</li><li>发送电子邮件。您很快会收到一封确认邮件。</li><li>前往任何一台图书馆打印机并登录以释放您的打印作业。它将以<strong>彩色</strong>打印。</li></ol>',
         final_printing_unknown: "您的信用额度足够。请到图书馆打印机完成您的打印工作。",
     },
     'zh-HK': {
@@ -195,14 +209,19 @@ const translations = {
         add_value_title: '為您的圖書證充值',
         add_value_body: '1. 在打印亭選擇<strong>充值</strong><br>2. 掃描您的圖書證並輸入密碼<br>3. 選擇<strong>下一步</strong><br>4. 您可以通過<strong>EFTPOS</strong>或<strong>現金</strong>充值（按照亭屏幕上的說明操作）',
         check_balance_title: '如何查詢餘額',
-        check_balance_body: '',
+        check_balance_body: '<ol><li>選擇<strong>查詢餘額</strong>。</li><li>掃描您的圖書證或輸入您的證號和密碼。</li><li>螢幕將顯示您目前的信用餘額。</li></ol>',
         print_source: '您從哪裡打印？',
         library_pc: '圖書館電腦',
         quick_print_pc: '快速打印電腦',
         usb_drive: 'USB',
         personal_device: '個人設備（如手機、筆記本電腦）',
         instructions: '說明',
+        instructions_photocopying: '如何使用影印機',
         instructions_scanning: '掃描說明',
+        instructions_printing_pc: '如何從圖書館電腦打印',
+        instructions_printing_usb: '如何從USB打印',
+        instructions_printing_quick_print_pc: '如何從快速打印電腦打印',
+        instructions_printing_device: '如何從您的個人設備打印',
         back: '返回',
         restart: '重新開始',
         skip: '跳過',
@@ -221,7 +240,9 @@ const translations = {
         final_scanning_ok: "<ol><li>登入打印機：<ol><li>掃描您的圖書證或訪客票條形碼</li><li>如果您使用圖書證，請輸入密碼（點擊密碼字段，點擊鍵盤圖標，輸入密碼，然後點擊兩次確定）</li></ol></li><li>選擇<strong>使用影印機</strong></li><li><strong>將USB插入</strong>打印機右側的端口。請稍候。</li><li>選擇<strong>將文件保存到外部存儲器</strong>（如果此選項未出現，請點擊屏幕右上角的USB圖標）</li><li>將文件正面朝下放在<strong>玻璃板</strong>上，或正面朝上放在<strong>頂部進紙器</strong>中</li><li>更改屏幕上的任何<strong>設置</strong></li><li>按下<strong>開始按鈕</strong><ol><li>如果使用玻璃板，要將另一頁掃描到同一文件，請將下一頁放在玻璃板上，按<strong>開始</strong>，然後重複直到所有頁面都掃描完畢</li></ol></li><li>掃描完最後一頁後，按<strong>完成</strong>，然後再次按<strong>開始按鈕</strong>將文件保存到USB</li><li>按下打印機上的訪問按鈕，並選擇屏幕右上角的<strong>註銷</strong></li><li>帶上您的<strong>USB</strong>和<strong>原始文件</strong></li></ol>",
         final_printing_pc: "請使用圖書館電腦將您的文件發送到打印隊列，然後從任何一台打印機上釋放。",
         final_printing_usb: "請將您的USB插入打印機，並按照屏幕上的說明打印您的文件。",
-        final_printing_device: "請使用“快速打印”服務將您的文件通過電子郵件發送到打印隊列，然後從任何一台打印机上釋放。",
+        final_printing_quick_print_pc_body: "<ol><li>在快速打印電腦上，打開網頁瀏覽器。首頁就是打印門戶。</li><li>選擇<strong>圖書證號碼/密碼</strong>或<strong>訪客票號碼</strong>登入。</li><li>輸入您的詳細資料並登入。對於訪客票，密碼是「<strong>GUEST</strong>」。</li><li>點擊<strong>選擇文件</strong>以尋找並上傳您要打印的文件。</li><li>上傳後，狀態將顯示為「<strong>等待釋放</strong>」。</li><li>前往任何一部圖書館打印機並登入以釋放您的打印作業。</li></ol>",
+        final_printing_device_bw_body: '<ol><li>在您的設備上，打開您的電郵應用程式。</li><li>建立一封新電郵，收件人為<strong>grl.print@spydus.com</strong>。主旨行可以留空。</li><li>附加您要打印的文件。支援大多數常見文件類型（PDF、DOCX、JPG等）。</li><li>傳送電郵。您很快會收到一封確認電郵。</li><li>前往任何一部圖書館打印機並登入以釋放您的打印作業。它將以<strong>黑白</strong>打印。</li></ol>',
+        final_printing_device_color_body: '<ol><li>在您的設備上，打開您的電郵應用程式。</li><li>建立一封新電郵，收件人為<strong>grl.print.colour@spydus.com</strong>。主旨行可以留空。</li><li>附加您要打印的文件。支援大多數常見文件類型（PDF、DOCX、JPG等）。</li><li>傳送電郵。您很快會收到一封確認電郵。</li><li>前往任何一部圖書館打印機並登入以釋放您的打印作業。它將以<strong>彩色</strong>打印。</li></ol>',
         final_printing_unknown: "您的信用額度足夠。請到圖書館打印機完成您的打印工作。",
     },
     'ne': {
@@ -253,14 +274,19 @@ const translations = {
         add_value_title: 'आफ्नो पुस्तकालय कार्डमा पैसा थप्नुहोस्',
         add_value_body: '<ol><li>प्रिन्टिङ किओस्कमा <strong>Add Value</strong> चयन गर्नुहोस्</li><li>आफ्नो पुस्तकालय कार्ड स्क्यान गर्नुहोस् र पासवर्ड हाल्नुहोस्</li><li><strong>Next</strong> चयन गर्नुहोस्</li><li>तपाईं <strong>EFTPOS</strong> वा <strong>नगद</strong>द्वारा पैसा थप्न सक्नुहुन्छ (किओस्क स्क्रिनमा निर्देशनहरू पालना गर्नुहोस्)</li></ol>',
         check_balance_title: 'आफ्नो ब्यालेन्स कसरी जाँच गर्ने',
-        check_balance_body: '',
+        check_balance_body: '<ol><li><strong>ब्यालेन्स जाँच गर्नुहोस्</strong> चयन गर्नुहोस्।</li><li>आफ्नो पुस्तकालय कार्ड स्क्यान गर्नुहोस् वा आफ्नो कार्ड नम्बर र PIN टाइप गर्नुहोस्।</li><li>स्क्रिनले तपाईंको हालको क्रेडिट ब्यालेन्स देखाउनेछ।</li></ol>',
         print_source: 'तपाईं कहाँबाट प्रिन्ट गर्दै हुनुहुन्छ?',
         library_pc: 'पुस्तकालयको कम्प्युटर',
         quick_print_pc: 'द्रुत प्रिन्ट पीसी',
         usb_drive: 'USB ड्राइभ',
         personal_device: 'व्यक्तिगत उपकरण (जस्तै फोन, ल्यापटप)',
         instructions: 'निर्देशनहरू',
+        instructions_photocopying: 'फोटोकपी मेसिन कसरी प्रयोग गर्ने',
         instructions_scanning: 'स्क्यानिङका लागि निर्देशनहरू',
+        instructions_printing_pc: 'पुस्तकालयको कम्प्युटरबाट कसरी प्रिन्ट गर्ने',
+        instructions_printing_usb: 'USB ड्राइभबाट कसरी प्रिन्ट गर्ने',
+        instructions_printing_quick_print_pc: 'द्रुत प्रिन्ट पीसीबाट कसरी प्रिन्ट गर्ने',
+        instructions_printing_device: 'आफ्नो व्यक्तिगत उपकरणबाट कसरी प्रिन्ट गर्ने',
         back: 'पछाडि',
         restart: 'पुनः सुरु गर्नुहोस्',
         skip: 'छोड्नुहोस्',
@@ -279,7 +305,9 @@ const translations = {
         final_scanning_ok: "<ol><li>प्रिन्टरमा साइन इन गर्नुहोस्:<ol><li>आफ्नो पुस्तकालय कार्ड वा अतिथि टिकट बारकोड स्क्यान गर्नुहोस्</li><li>यदि तपाईं आफ्नो पुस्तकालय कार्ड प्रयोग गर्दै हुनुहुन्छ भने, आफ्नो पासवर्ड हाल्नुहोस् (पासवर्ड फिल्डमा ट्याप गर्नुहोस्, किबोर्ड आइकनमा ट्याप गर्नुहोस्, आफ्नो पासवर्ड टाइप गर्नुहोस्, र दुई पटक <strong>OK</strong> ट्याप गर्नुहोस्)</li></ol></li><li><strong>Use Copier</strong> छान्नुहोस्</li><li>प्रिन्टरको दायाँ छेउको पोर्टमा <strong>आफ्नो USB घुसाउनुहोस्</strong>। केही सेकेन्ड पर्खनुहोस्।</li><li><strong>Save a document to external memory</strong> चयन गर्नुहोस् (यदि यो विकल्प देखा परेन भने, स्क्रिनको माथिल्लो-दायाँ कुनामा रहेको USB आइकनमा ट्याप गर्नुहोस्)</li><li>आफ्नो कागजातलाई <strong>सिसामा</strong> अनुहार तल वा <strong>माथिल्लो फिडरमा</strong> अनुहार माथि राख्नुहोस्</li><li>स्क्रिनमा कुनै पनि <strong>सेटिङहरू</strong> परिवर्तन गर्नुहोस्</li><li><strong>Start बटन</strong> थिच्नुहोस्<ol><li>यदि सिसा प्रयोग गर्दै हुनुहुन्छ भने, उही फाइलमा अर्को पृष्ठ स्क्यान गर्न, अर्को पृष्ठलाई सिसामा राख्नुहोस्, <strong>Start</strong> थिच्नुहोस्, र सबै पृष्ठहरू स्क्यान नभएसम्म दोहोर्याउनुहोस्</li></ol></li><li>अन्तिम पृष्ठ पछि, <strong>Finish</strong> थिच्नुहोस्, र फाइललाई आफ्नो USB मा बचत गर्न फेरि <strong>Start बटन</strong> थिच्नुहोस्</li><li>प्रिन्टरमा Access बटन थिच्नुहोस् र स्क्रिनको माथिल्लो-दायाँ कुनामा <strong>Log out</strong> चयन गर्नुहोस्</li><li>आफ्नो <strong>USB</strong> र <strong>सक्कली कागजातहरू</strong> साथमा लिनुहोस्</li></ol>",
         final_printing_pc: "कृपया आफ्नो कागजात प्रिन्टर लाममा पठाउन पुस्तकालयको कम्प्युटर प्रयोग गर्नुहोस्, त्यसपछि कुनै पनि प्रिन्टरबाट यसलाई रिलिज गर्नुहोस्।",
         final_printing_usb: "कृपया आफ्नो USB ड्राइभ प्रिन्टरमा घुसाउनुहोस् र आफ्नो कागजात प्रिन्ट गर्न स्क्रिनमा दिइएका निर्देशनहरू पालना गर्नुहोस्।",
-        final_printing_device: "कृपया आफ्नो कागजात इमेलमार्फत प्रिन्ट लाममा पठाउन 'Quick Print' सेवा प्रयोग गर्नुहोस्, त्यसपछि कुनै पनि प्रिन्टरबाट यसलाई रिलिज गर्नुहोस्।",
+        final_printing_quick_print_pc_body: "<ol><li>द्रुत प्रिन्ट पीसीमा, वेब ब्राउजर खोल्नुहोस्। होमपेज प्रिन्ट पोर्टल हो।</li><li>लग इन गर्न <strong>पुस्तकालय कार्ड नम्बर/पासवर्ड</strong> वा <strong>अतिथि टिकट नम्बर</strong> चयन गर्नुहोस्।</li><li>आफ्नो विवरण प्रविष्ट गर्नुहोस् र लग इन गर्नुहोस्। अतिथि टिकटहरूको लागि, पासवर्ड “<strong>GUEST</strong>” हो।</li><li>तपाईंले प्रिन्ट गर्न चाहनुभएको कागजात फेला पार्न र अपलोड गर्न <strong>फाइलहरू चयन गर्नुहोस्</strong> क्लिक गर्नुहोस्।</li><li>एक पटक अपलोड भएपछि, स्थितिले “<strong>रिलीजको लागि पर्खँदै</strong>” देखाउनेछ।</li><li>कुनै पनि पुस्तकालय प्रिन्टरमा जानुहोस् र आफ्नो प्रिन्ट कार्य रिलिज गर्न साइन इन गर्नुहोस्।</li></ol>",
+        final_printing_device_bw_body: '<ol><li>आफ्नो उपकरणबाट, आफ्नो इमेल अनुप्रयोग खोल्नुहोस्।</li><li><strong>grl.print@spydus.com</strong> मा नयाँ इमेल पठाउनुहोस्। विषय खाली छोड्न सकिन्छ।</li><li>तपाईंले प्रिन्ट गर्न चाहनुभएको कागजात संलग्न गर्नुहोस्। धेरैजसो साधारण फाइल प्रकारहरू समर्थित छन् (PDF, DOCX, JPG, आदि)।</li><li>इमेल पठाउनुहोस्। तपाईंले छिट्टै एक पुष्टिकरण इमेल प्राप्त गर्नुहुनेछ।</li><li>कुनै पनि पुस्तकालय प्रिन्टरमा जानुहोस् र आफ्नो प्रिन्ट कार्य रिलिज गर्न साइन इन गर्नुहोस्। यो <strong>कालो र सेतो</strong> मा प्रिन्ट हुनेछ।</li></ol>',
+        final_printing_device_color_body: '<ol><li>आफ्नो उपकरणबाट, आफ्नो इमेल अनुप्रयोग खोल्नुहोस्।</li><li><strong>grl.print.colour@spydus.com</strong> मा नयाँ इमेल पठाउनुहोस्। विषय खाली छोड्न सकिन्छ।</li><li>तपाईंले प्रिन्ट गर्न चाहनुभएको कागजात संलग्न गर्नुहोस्। धेरैजसो साधारण फाइल प्रकारहरू समर्थित छन् (PDF, DOCX, JPG, आदि)।</li><li>इमेल पठाउनुहोस्। तपाईंले छिट्टै एक पुष्टिकरण इमेल प्राप्त गर्नुहुनेछ।</li><li>कुनै पनि पुस्तकालय प्रिन्टरमा जानुहोस् र आफ्नो प्रिन्ट कार्य रिलिज गर्न साइन इन गर्नुहोस्। यो <strong>रंगीन</strong> मा प्रिन्ट हुनेछ।</li></ol>',
         final_printing_unknown: "तपाईंसँग पर्याप्त क्रेडिट छ। कृपया आफ्नो प्रिन्टिङ कार्य पूरा गर्न पुस्तकालय प्रिन्टरमा जानुहोस्।",
     },
     'it': {
@@ -311,14 +339,19 @@ const translations = {
         add_value_title: 'Aggiungi credito alla tua tessera',
         add_value_body: '<ol><li>Seleziona <strong>Aggiungi Credito</strong> presso il chiosco di stampa</li><li>Scansiona la tua tessera e inserisci la password</li><li>Seleziona <strong>Avanti</strong></li><li>Puoi aggiungere denaro tramite <strong>EFTPOS</strong> o in <strong>contanti</strong> (segui le istruzioni sullo schermo del chiosco)</li></ol>',
         check_balance_title: 'Come controllare il tuo saldo',
-        check_balance_body: '',
+        check_balance_body: '<ol><li>Seleziona <strong>Controlla Saldo</strong>.</li><li>Scansiona la tua tessera della biblioteca o digita il numero della tessera e il PIN.</li><li>Lo schermo mostrerà il tuo saldo di credito attuale.</li></ol>',
         print_source: 'Da dove stai stampando?',
         library_pc: 'PC della biblioteca',
         quick_print_pc: 'PC per stampa rapida',
         usb_drive: 'Chiavetta USB',
         personal_device: 'Dispositivo personale (es. telefono, laptop)',
         instructions: 'Istruzioni',
+        instructions_photocopying: 'Come usare la fotocopiatrice',
         instructions_scanning: 'Istruzioni per la scansione',
+        instructions_printing_pc: 'Come stampare da un PC della biblioteca',
+        instructions_printing_usb: 'Come stampare da una chiavetta USB',
+        instructions_printing_quick_print_pc: 'Come stampare da un PC per stampa rapida',
+        instructions_printing_device: 'Come stampare dal tuo dispositivo personale',
         back: 'Indietro',
         restart: 'Ricomincia',
         skip: 'Salta',
@@ -337,7 +370,9 @@ const translations = {
         final_scanning_ok: "<ol><li>Accedi alla stampante:<ol><li>Scansiona il codice a barre della tua tessera della biblioteca o del biglietto ospite</li><li>Se usi la tessera della biblioteca, inserisci la tua password (tocca il campo <strong>password</strong>, tocca l'icona della <strong>tastiera</strong>, digita la tua <strong>password</strong> e tocca <strong>OK</strong> due volte)</li></ol></li><li>Scegli <strong>Usa Fotocopiatrice</strong></li><li><strong>Inserisci la tua USB</strong> nella porta sul lato destro della stampante. Aspetta qualche secondo.</li><li>Seleziona <strong>Salva un documento su memoria esterna</strong> (Se questa opzione non appare, tocca l'icona USB in alto a destra dello schermo)</li><li>Posiziona il tuo documento a faccia in giù sul <strong>vetro</strong>, o a faccia in su nell'<strong>alimentatore superiore</strong></li><li>Cambia eventuali <strong>impostazioni</strong> sullo schermo</li><li>Premi il pulsante <strong>Start</strong><ol><li>Se usi il vetro, per scansionare un'altra pagina nello stesso file, posiziona la pagina successiva sul vetro, premi <strong>Start</strong> e ripeti finché tutte le pagine non sono state scansionate</li></ol></li><li>Dopo l'ultima pagina, premi <strong>Fine</strong>, e premi di nuovo il pulsante <strong>Start</strong> per salvare il file sulla tua USB</li><li>Premi il pulsante Accesso sulla stampante e seleziona <strong>Esci</strong> in alto a destra dello schermo</li><li>Prendi la tua <strong>USB</strong> e i <strong>documenti originali</strong> con te</li></ol>",
         final_printing_pc: "Per favore, usa un computer della biblioteca per inviare il tuo documento alla coda di stampa, poi rilascialo da una qualsiasi stampante.",
         final_printing_usb: "Per favore, inserisci la tua chiavetta USB in una stampante e segui le istruzioni sullo schermo per stampare il tuo documento.",
-        final_printing_device: "Per favore, usa il servizio 'Stampa Rapida' per inviare il tuo documento via email alla coda di stampa, poi rilascialo da una qualsiasi stampante.",
+        final_printing_quick_print_pc_body: "<ol><li>Sul PC per la stampa rapida, apri il browser web. La homepage è il portale di stampa.</li><li>Seleziona <strong>Numero Tessera Biblioteca/Password</strong> o <strong>Numero Biglietto Ospite</strong> per accedere.</li><li>Inserisci i tuoi dati e accedi. Per i biglietti ospiti, la password è “<strong>GUEST</strong>”.</li><li>Fai clic su <strong>Seleziona File</strong> per trovare e caricare il documento che desideri stampare.</li><li>Una volta caricato, lo stato mostrerà “<strong>In attesa di rilascio</strong>”.</li><li>Vai a una qualsiasi stampante della biblioteca e accedi per rilasciare il tuo lavoro di stampa.</li></ol>",
+        final_printing_device_bw_body: '<ol><li>Dal tuo dispositivo, apri la tua applicazione email.</li><li>Crea una nuova email indirizzata a <strong>grl.print@spydus.com</strong>. L\'oggetto può essere lasciato vuoto.</li><li>Allega il documento che desideri stampare. Sono supportati i tipi di file più comuni (PDF, DOCX, JPG, ecc.).</li><li>Invia l\'email. Riceverai a breve un\'email di conferma.</li><li>Vai a una qualsiasi stampante della biblioteca e accedi per rilasciare il tuo lavoro di stampa. Verrà stampato in <strong>Bianco e Nero</strong>.</li></ol>',
+        final_printing_device_color_body: '<ol><li>Dal tuo dispositivo, apri la tua applicazione email.</li><li>Crea una nuova email indirizzata a <strong>grl.print.colour@spydus.com</strong>. L\'oggetto può essere lasciato vuoto.</li><li>Allega il documento che desideri stampare. Sono supportati i tipi di file più comuni (PDF, DOCX, JPG, ecc.).</li><li>Invia l\'email. Riceverai a breve un\'email di conferma.</li><li>Vai a una qualsiasi stampante della biblioteca e accedi per rilasciare il tuo lavoro di stampa. Verrà stampato a <strong>Colori</strong>.</li></ol>',
         final_printing_unknown: "Hai abbastanza credito. Per favore, procedi a una stampante della biblioteca per completare il tuo lavoro di stampa.",
     },
     'el': {
@@ -369,14 +404,19 @@ const translations = {
         add_value_title: 'Προσθήκη χρημάτων στην κάρτα σας',
         add_value_body: '<ol><li>Επιλέξτε <strong>Προσθήκη Αξίας</strong> στο Κιόσκι Εκτύπωσης</li><li>Σαρώστε την κάρτα βιβλιοθήκης σας και εισαγάγετε τον κωδικό πρόσβασής σας</li><li>Επιλέξτε <strong>Επόμενο</strong></li><li>Μπορείτε να προσθέσετε χρήματα είτε με <strong>EFTPOS</strong> είτε με <strong>μετρητά</strong> (ακολουθήστε τις οδηγίες στην οθόνη του κιоск)</li></ol>',
         check_balance_title: 'Πώς να ελέγξετε το υπόλοιπό σας',
-        check_balance_body: '',
+        check_balance_body: '<ol><li>Επιλέξτε <strong>Έλεγχος Υπολοίπου</strong>.</li><li>Σαρώστε την κάρτα της βιβλιοθήκης σας ή πληκτρολογήστε τον αριθμό της κάρτας και το PIN σας.</li><li>Η οθόνη θα εμφανίσει το τρέχον πιστωτικό σας υπόλοιπο.</li></ol>',
         print_source: 'Από πού εκτυπώνετε;',
         library_pc: 'Υπολογιστής βιβλιοθήκης',
         quick_print_pc: 'Υπολογιστής γρήγορης εκτύπωσης',
         usb_drive: 'USB Stick',
         personal_device: 'Προσωπική συσκευή (π.χ. τηλέφωνο, laptop)',
         instructions: 'Οδηγίες',
+        instructions_photocopying: 'Πώς να χρησιμοποιήσετε το φωτοαντιγραφικό',
         instructions_scanning: 'Οδηγίες για σάρωση',
+        instructions_printing_pc: 'Πώς να εκτυπώσετε από υπολογιστή της βιβλιοθήκης',
+        instructions_printing_usb: 'Πώς να εκτυπώσετε από ένα USB Stick',
+        instructions_printing_quick_print_pc: 'Πώς να εκτυπώσετε από έναν υπολογιστή γρήγορης εκτύπωσης',
+        instructions_printing_device: 'Πώς να εκτυπώσετε από την προσωπική σας συσκευή',
         back: 'Πίσω',
         restart: 'Επανεκκίνηση',
         skip: 'Παράλειψη',
@@ -392,27 +432,28 @@ const translations = {
         final_guest_ticket_body: "<ol><li>Επιλέξτε <strong>Εισιτήριο Εκτύπωσης, Αντιγραφής και Σάρωσης</strong> στο Κιόσκι Εκτύπωσης</li><li>Μπορείτε να προσθέσετε χρήματα είτε με <strong>EFTPOS</strong> είτε με <strong>μετρητά</strong> (ακολουθήστε τις οδηγίες στην οθόνη του κιоск)</li><li>Εάν πληρώνετε με μετρητά, θα εκτυπωθεί αυτόματα ένα <strong>Εισιτήριο Επισκέπτη</strong>. Εάν πληρώνετε με EFTPOS, θα πρέπει να επιλέξετε <strong>Ναι</strong> για να εκτυπωθεί το Εισιτήριο Επισκέπτη. Θα χρειαστεί να χρησιμοποιήσετε αυτό το εισιτήριο κατά την εκτύπωση, αντιγραφή και σάρωση.</li></ol>",
         final_no_credit_body: "Ο λογαριασμός σας δεν έχει αρκετή πίστωση. Παρακαλώ επισκεφθείτε το γραφείο εξυπηρέτησης για να προσθέσετε χρήματα στην κάρτα σας.",
         final_photocopying_ok: '<ol><li>Συνδεθείτε σε οποιονδήποτε εκτυπωτή της βιβλιοθήκης.<ol type="a"><li>Σαρώστε την <strong>κάρτα βιβλιοθήκης</strong> σας ή τον <strong>γραμμωτό κώδικα του εισιτηρίου επισκέπτη</strong>.</li><li>Εάν χρησιμοποιείτε την κάρτα βιβλιοθήκης σας, εισαγάγετε τον κωδικό πρόσβασής σας (πατήστε το <strong>πεδίο κωδικού πρόσβασης</strong>, πατήστε το <strong>εικονίδιο του πληκτρολογίου</strong>, εισαγάγετε τον <strong>κωδικό πρόσβασής</strong> σας και πατήστε δύο φορές <strong>OK</strong>).</li></ol></li><li>Επιλέξτε <strong>Χρήση Αντιγραφικού</strong> και <strong>Αντιγραφή</strong></li><li>Τοποθετήστε το έγγραφό σας με την όψη προς τα κάτω στο γυαλί</li><li>Χρησιμοποιήστε την οθόνη του εκτυπωτή για να προσαρμόσετε τις ρυθμίσεις σάρωσης</li><li>Πατήστε το <strong>κουμπί Έναρξη</strong> για να σαρώσετε την πρώτη σελίδα</li><li>Για περισσότερες σελίδες, τοποθετήστε το επόμενο αντικείμενο στο γυαλί και πατήστε ξανά το <strong>κουμπί Έναρξη</strong>. Επαναλάβετε για όλες τις σελίδες.</li><li>Αφού σαρωθεί η τελευταία σελίδα, πατήστε <strong>Τέλος</strong> στην οθόνη και πατήστε ξανά το <strong>κουμπί Έναρξη</strong> για να απελευθερώσετε την εκτύπωσή σας</li><li>Για να αποσυνδεθείτε, πατήστε το <strong>κουμπί Πρόσβασης</strong> στον εκτυπωτή και <strong>Αποσύνδεση</strong> στην οθόνη.</li></ol>',
-        final_scanning_ok: "<ol><li>Συνδεθείτε στον εκτυπωτή:<ol><li>Σαρώστε τον γραμμωτό κώδικα της κάρτας βιβλιοθήκης ή του εισιτηρίου επισκέπτη</li><li>Εάν χρησιμοποιείτε την κάρτα βιβλιοθήκης σας, εισαγάγετε τον κωδικό πρόσβασής σας (πατήστε το πεδίο <strong>κωδικού πρόσβασης</strong>, πατήστε το εικονίδιο του <strong>πληκτρολογίου</strong>, πληκτρολογήστε τον <strong>κωδικό</strong> σας και πατήστε <strong>ΟΚ</strong> δύο φορές)</li></ol></li><li>Επιλέξτε <strong>Χρήση Αντιγραφικού</strong></li><li><strong>Εισαγάγετε το USB σας</strong> στη θύρα στη δεξιά πλευρά του εκτυπωτή. Περιμένετε μερικά δευτερόλεπτα.</li><li>Επιλέξτε <strong>Αποθήκευση εγγράφου σε εξωτερική μνήμη</strong> (Εάν αυτή η επιλογή δεν εμφανίζεται, πατήστε το εικονίδιο USB στην επάνω δεξιά γωνία της οθόνης)</li><li>Τοποθετήστε το έγγραφό σας με την όψη προς τα κάτω στο <strong>γυαλί</strong>, ή με την όψη προς τα πάνω στον <strong>επάνω τροφοδότη</strong></li><li>Αλλάξτε τυχόν <strong>ρυθμίσεις</strong> στην οθόνη</li><li>Πατήστε το κουμπί <strong>Έναρξη</strong><ol><li>Εάν χρησιμοποιείτε το γυαλί, για να σαρώσετε μια άλλη σελίδα στο ίδιο αρχείο, τοποθετήστε την επόμενη σελίδα στο γυαλί, πατήστε <strong>Έναρξη</strong> και επαναλάβετε μέχρι να σαρωθούν όλες οι σελίδες</li></ol></li><li>Μετά την τελευταία σελίδα, πατήστε <strong>Τέλος</strong> και πατήστε ξανά το κουμπί <strong>Έναρξη</strong> για να αποθηκεύσετε το αρχείο στο USB σας</li><li>Πατήστε το κουμπί Πρόσβαση στον εκτυπωτή και επιλέξτε <strong>Αποσύνδεση</strong> στην επάνω δεξιά γωνία της οθόνης</li><li>Πάρτε το <strong>USB</strong> και τα <strong>πρωτότυπα έγγραφά</strong> σας μαζί σας</li></ol>",
+        final_scanning_ok: "<ol><li>Συνδεθείτε στον εκτυπωτή:<ol><li>Σαρώστε τον γραμμωτό κώδικα της κάρτας βιβλιοθήκης ή του εισιτηρίου επισκέπτη</li><li>Εάν χρησιμοποιείτε την κάρτα βιβλιοθήκης σας, εισαγάγετε τον κωδικό πρόσβασής σας (πατήστε το πεδίο <strong>κωδικού πρόσβασης</strong>, πατήστε το εικονίδιο του <strong>πληκτρολογίου</strong>, πληκτρολογήστε τον <strong>κωδικό</strong> σας και πατήστε <strong>ΟΚ</strong> δύο φορές)</li></ol></li><li>Επιλέξτε <strong>Χρήση Αντιγραφικού</strong></li><li><strong>Εισαγάγετε το USB σας</strong> στη θύρα στη δεξιά πλευρά του εκτυπωτή. Περιμένετε μερικά δευτερόλεπτα.</li><li>Επιλέξτε <strong>Αποθήκευση εγγράφου σε εξωτερική μνήμη</strong> (Εάν αυτή η επιλογή δεν εμφανίζεται, πατήστε το εικονίδιο USB στην επάνω δεξιά γωνία της οθόνης)</li><li>Τοποθετήστε το έγγραφό σας με την όψη προς τα κάτω στο <strong>γυαλί</strong>, ή με την όψη προς τα πάνω στον <strong>επάνω τροφοδότη</strong></li><li>Αλλάξτε τυχόν <strong>ρυθμίσεις</strong> στην οθόνη</li><li>Πατήστε το κουμπί <strong>Έναρξη</strong><ol><li>Εάν χρησιμοποιείτε το γυαλί, για να σαρώσετε μια άλλη σελίδα στο ίδιο αρχείο, τοποθετήστε την επόμενη σελίδα στο γυαλί, πατήστε <strong>Έναρξη</strong> και επαναλάβετε μέχρι να σαρωθούν όλες τις σελίδες</li></ol></li><li>Μετά την τελευταία σελίδα, πατήστε <strong>Τέλος</strong> και πατήστε ξανά το κουμπί <strong>Έναρξη</strong> για να αποθηκεύσετε το αρχείο στο USB σας</li><li>Πατήστε το κουμπί Πρόσβαση στον εκτυπωτή και επιλέξτε <strong>Αποσύνδεση</strong> στην επάνω δεξιά γωνία της οθόνης</li><li>Πάρτε το <strong>USB</strong> και τα <strong>πρωτότυπα έγγραφά</strong> σας μαζί σας</li></ol>",
         final_printing_pc: "Παρακαλώ χρησιμοποιήστε έναν υπολογιστή της βιβλιοθήκης για να στείλετε το έγγραφό σας στην ουρά εκτύπωσης και, στη συνέχεια, απελευθερώστε το από οποιονδήποτε εκτυπωτή.",
         final_printing_usb: "Παρακαλώ εισαγάγετε το USB stick σας σε έναν εκτυπωτή και ακολουθήστε τις οδηγίες στην οθόνη για να εκτυπώσετε το έγγραφό σας.",
-        final_printing_device: "Παρακαλώ χρησιμοποιήστε την υπηρεσία 'Γρήγορη Εκτύπωση' για να στείλετε το έγγραφό σας μέσω email στην ουρά εκτύπωσης και, στη συνέχεια, απελευθερώστε το από οποιονδήποτε εκτυπωτή.",
+        final_printing_quick_print_pc_body: "<ol><li>Στον υπολογιστή γρήγορης εκτύπωσης, ανοίξτε το πρόγραμμα περιήγησης ιστού. Η αρχική σελίδα είναι η πύλη εκτύπωσης.</li><li>Επιλέξτε είτε <strong>Αριθμός Κάρτας Βιβλιοθήκης/Κωδικός Πρόσβασης</strong> είτε <strong>Αριθμός Εισιτηρίου Επισκέπτη</strong> για να συνδεθείτε.</li><li>Εισαγάγετε τα στοιχεία σας και συνδεθείτε. Για τα εισιτήρια επισκεπτών, ο κωδικός πρόσβασης είναι “<strong>GUEST</strong>”.</li><li>Κάντε κλικ στο <strong>Επιλογή Αρχείων</strong> για να βρείτε και να ανεβάσετε το έγγραφο που θέλετε να εκτυπώσετε.</li><li>Μόλις ανεβεί, η κατάσταση θα δείξει “<strong>Αναμονή για απελευθέρωση</strong>”.</li><li>Πηγαίνετε σε οποιονδήποτε εκτυπωτή της βιβλιοθήκης και συνδεθείτε για να απελευθερώσετε την εργασία εκτύπωσής σας.</li></ol>",
+        final_printing_device_bw_body: '<ol><li>Από τη συσκευή σας, ανοίξτε την εφαρμογή email σας.</li><li>Δημιουργήστε ένα νέο email με παραλήπτη το <strong>grl.print@spydus.com</strong>. Το θέμα μπορεί να παραμείνει κενό.</li><li>Επισυνάψτε το έγγραφο που θέλετε να εκτυπώσει. Υποστηρίζονται οι περισσότεροι συνήθεις τύποι αρχείων (PDF, DOCX, JPG, κ.λπ.).</li><li>Στείλτε το email. Θα λάβετε σύντομα ένα email επιβεβαίωσης.</li><li>Πηγαίνετε σε οποιονδήποτε εκτυπωτή της βιβλιοθήκης και συνδεθείτε για να απελευθερώσετε την εργασία εκτύπωσής σας. Θα εκτυπωθεί σε <strong>Ασπρόμαυρο</strong>.</li></ol>',
+        final_printing_device_color_body: '<ol><li>Από τη συσκευή σας, ανοίξτε την εφαρμογή email σας.</li><li>Δημιουργήστε ένα νέο email με παραλήπτη το <strong>grl.print.colour@spydus.com</strong>. Το θέμα μπορεί να παραμείνει κενό.</li><li>Επισυνάψτε το έγγραφο που θέλετε να εκτυπώσετε. Υποστηρίζονται οι περισσότεροι συνήθεις τύποι αρχείων (PDF, DOCX, JPG, κ.λπ.).</li><li>Στείλτε το email. Θα λάβετε σύντομα ένα email επιβεβαίωσης.</li><li>Πηγαίνετε σε οποιονδήποτε εκτυπωτή της βιβλιοθήκης και συνδεθείτε για να απελευθερώσετε την εργασία εκτύπωσής σας. Θα εκτυπωθεί <strong>Έγχρωμα</strong>.</li></ol>',
         final_printing_unknown: "Έχετε αρκετή πίστωση. Παρακαλώ προχωρήστε σε έναν εκτυπωτή της βιβλιοθήκης για να ολοκληρώσετε την εκτύπωσή σας.",
     },
 };
 
-function translatePage(lang: string) {
+function translatePage(lang: string): void {
     document.querySelectorAll('[data-translate]').forEach(el => {
-        const htmlEl = el as HTMLElement;
-        const key = htmlEl.dataset.translate;
+        const key = (el as HTMLElement).dataset.translate;
         if (key && translations[lang] && translations[lang][key]) {
-            htmlEl.innerHTML = translations[lang][key];
+            el.innerHTML = translations[lang][key];
         }
     });
 }
 
 
 // --- CORE LOGIC ---
-function showStep(stepId: string, isBack = false) {
+function showStep(stepId: string, isBack: boolean = false): void {
     const currentStep = document.querySelector('.step.active');
     if (currentStep && !isBack) {
         stepHistory.push(currentStep.id);
@@ -454,7 +495,9 @@ function showStep(stepId: string, isBack = false) {
         unsurePagesBtn.style.display = 'block';
     } else {
         scanHelpIcon.style.display = 'none';
-        unsurePagesBtn.style.display = 'none';
+        if (unsurePagesBtn) { // ensure button exists
+          unsurePagesBtn.style.display = 'none';
+        }
     }
 
 
@@ -476,13 +519,17 @@ function showStep(stepId: string, isBack = false) {
     if (finalActionSteps.includes(stepId)) {
         skipBtn.style.display = 'none';
         priceHelpIcon.style.display = 'none';
-    } else if (stepId === 'step-cost-confirmation' && userSelections.service === 'scanning') {
-        skipBtn.style.display = 'none';
+    } else if (stepId === 'step-cost-confirmation' && userSelections.service !== 'scanning') {
+        skipBtn.style.display = 'block';
         priceHelpIcon.style.display = 'block';
     }
     else {
         skipBtn.style.display = 'block';
-        priceHelpIcon.style.display = 'block';
+        if (userSelections.service === 'scanning' && stepId === 'step-pages'){
+             priceHelpIcon.style.display = 'none';
+        } else {
+             priceHelpIcon.style.display = 'block';
+        }
     }
     
     backBtn.style.visibility = stepHistory.length > 0 ? 'visible' : 'hidden';
@@ -494,7 +541,7 @@ function showStep(stepId: string, isBack = false) {
     }
 }
 
-function goBack() {
+function goBack(): void {
     if (stepHistory.length > 0) {
         const previousStepId = stepHistory.pop();
         if(previousStepId) {
@@ -503,7 +550,7 @@ function goBack() {
     }
 }
 
-function updateProgressBar() {
+function updateProgressBar(): void {
     const totalSteps = 5;
     let currentProgress = stepHistory.length;
     
@@ -515,7 +562,7 @@ function updateProgressBar() {
     progressBar.style.width = `${Math.min(percentage, 100)}%`;
 }
 
-function resetApp() {
+function resetApp(): void {
     userSelections.service = null;
     userSelections.pages = 1;
     userSelections.size = null;
@@ -530,7 +577,7 @@ function resetApp() {
     showStep('step-service');
 }
 
-function skipToEnd() {
+function skipToEnd(): void {
     const currentStep = document.querySelector('.step.active');
 
     if (currentStep && currentStep.id === 'step-pages' && userSelections.service === 'scanning') {
@@ -553,7 +600,7 @@ function skipToEnd() {
     }
 }
 
-function calculateCost() {
+function calculateCost(): number {
     const rates = {
         print_copy: {
             A4: { bw: 0.40, color: 0.80 },
@@ -568,7 +615,7 @@ function calculateCost() {
     if (typeof userSelections.pages === 'string') return 0;
 
     if (userSelections.service === 'scanning') {
-        const rate = rates.scan.A4.bw; // Since size is skipped, default to A4
+        const rate = rates.scan.A4.bw; 
         return userSelections.pages * rate;
     } else if (userSelections.size && userSelections.color) {
         const rate = rates.print_copy[userSelections.size][userSelections.color];
@@ -577,7 +624,7 @@ function calculateCost() {
     return 0;
 }
 
-function displayFinalMessage() {
+function displayFinalMessage(): void {
     let messageKey = '';
     let titleKey = 'instructions';
 
@@ -594,6 +641,7 @@ function displayFinalMessage() {
         }
         
         if (service === 'photocopying') {
+            titleKey = "instructions_photocopying";
             messageKey = "final_photocopying_ok";
         } else if (service === 'scanning') {
             titleKey = "instructions_scanning";
@@ -601,14 +649,24 @@ function displayFinalMessage() {
         } else { // Printing
             switch (userSelections.printSource) {
                 case 'pc':
+                    titleKey = "instructions_printing_pc";
                     messageKey = "final_printing_pc";
                     break;
                 case 'usb':
+                    titleKey = "instructions_printing_usb";
                     messageKey = "final_printing_usb";
                     break;
                 case 'quick-print-pc':
+                    titleKey = "instructions_printing_quick_print_pc";
+                    messageKey = "final_printing_quick_print_pc_body";
+                    break;
                 case 'device':
-                    messageKey = "final_printing_device";
+                    titleKey = "instructions_printing_device";
+                    if (userSelections.color === 'bw') {
+                        messageKey = 'final_printing_device_bw_body';
+                    } else { // 'color'
+                        messageKey = 'final_printing_device_color_body';
+                    }
                     break;
                 default:
                     messageKey = "final_printing_unknown";
@@ -616,17 +674,15 @@ function displayFinalMessage() {
             }
         }
     }
-    const currentLangEl = document.querySelector('.lang-btn.active') as HTMLElement;
-    const currentLang = (currentLangEl && currentLangEl.dataset.lang) || 'en';
-    finalTitleEl.innerHTML = translations[currentLang][titleKey];
-    finalMessageEl.innerHTML = translations[currentLang][messageKey];
+    finalTitleEl.dataset.translate = titleKey;
+    finalMessageEl.dataset.translate = messageKey;
     showStep('step-final');
 }
 
-function openModal(modal: HTMLElement) {
+function openModal(modal: HTMLElement): void {
     modal.classList.add('modal-open');
 }
-function closeModal(modal: HTMLElement) {
+function closeModal(modal: HTMLElement): void {
     modal.classList.remove('modal-open');
 }
 
@@ -635,8 +691,9 @@ appContainer.addEventListener('click', (e) => {
     const currentStep = target.closest('.step');
     if (!currentStep) return;
 
-    if (currentStep.id === 'step-service' && target.dataset.service) {
-        userSelections.service = target.dataset.service;
+    const service = target.dataset.service;
+    if (currentStep.id === 'step-service' && service) {
+        userSelections.service = service;
         if (userSelections.service === 'scanning') {
             showStep('step-usb-check');
         } else {
@@ -724,11 +781,7 @@ restartBtn.addEventListener('click', resetApp);
 skipBtn.addEventListener('click', skipToEnd);
 
 priceHelpIcon.addEventListener('click', () => {
-    if (userSelections.service === 'scanning') {
-        openModal(scanPriceModal);
-    } else {
-        openModal(priceModal);
-    }
+    openModal(priceModal);
 });
 modalCloseBtn.addEventListener('click', () => closeModal(priceModal));
 priceModal.addEventListener('click', (e) => {
