@@ -1,7 +1,7 @@
 
 # Library Services Kiosk Interface
 
-A user-friendly, multi-language, step-by-step kiosk interface designed to guide library patrons through printing, photocopying, and scanning services. This application is a standalone frontend project built with HTML, CSS, and TypeScript, focusing on clarity, accessibility, and ease of use.
+A user-friendly, multi-language, step-by-step kiosk interface designed to guide library patrons through printing, photocopying, and scanning services. This application is a standalone frontend project built with HTML, CSS, and JavaScript, focusing on clarity, accessibility, and ease of use.
 
 ![Kiosk Interface Screenshot](https://i.imgur.com/example-screenshot.png) 
 *(Replace with an actual screenshot of the application)*
@@ -29,7 +29,7 @@ This project is built with web-native technologies and requires no external fram
 
 - **HTML5:** For the core structure and content.
 - **CSS3:** For modern styling, animations, and responsive layout. Uses CSS variables for easy theming.
-- **TypeScript:** For the core application logic, state management, and DOM manipulation, providing type safety and improved readability.
+- **JavaScript (ES6 Modules):** For the core application logic, state management, and DOM manipulation.
 
 ## 📂 Project Structure
 
@@ -37,7 +37,7 @@ This project is built with web-native technologies and requires no external fram
 .
 ├── index.html       # Main HTML file containing all UI steps and content structure.
 ├── index.css        # All styles for the application.
-├── index.tsx        # All TypeScript logic for state, translations, and interactivity. (Embedded in index.html)
+├── index.js         # All JavaScript logic for state, translations, and interactivity.
 └── metadata.json    # Project metadata.
 └── README.md        # This file.
 ```
@@ -63,20 +63,20 @@ This kiosk is designed to be easily adapted for other library systems.
 
 ### Adding/Editing Languages
 
-1.  Open `index.html` and find the `<script type="module">` section.
+1.  Open `index.js`.
 2.  Locate the `translations` object.
 3.  Add a new language object using its two-letter language code (e.g., `'fr'` for French).
 4.  Copy the structure from the `'en'` object and translate all the string values.
-5.  Add a new language button in the `language-buttons` div in the HTML body.
+5.  In `index.html`, add a new language button in the `language-buttons` div in the HTML body.
 
 ### Updating Prices
 
-1.  **For Cost Calculation:** In the `calculateCost` function within the script, update the values in the `rates` object.
-2.  **For Display Modals:** In the HTML body, find the `price-modal` and `scan-price-modal` divs and update the price text displayed to the user.
+1.  **For Cost Calculation:** In the `calculateCost` function within `index.js`, update the values in the `rates` object.
+2.  **For Display Modals:** In `index.html`, find the `price-modal` and `scan-price-modal` divs and update the price text displayed to the user.
 
 ### Changing Instructions
 
-All final instruction text is located within the `translations` object in the script. Find the relevant keys (e.g., `final_photocopying_ok`, `final_printing_pc`) and modify the HTML string to match your library's procedures.
+All final instruction text is located within the `translations` object in `index.js`. Find the relevant keys (e.g., `final_photocopying_ok`, `final_printing_pc`) and modify the HTML string to match your library's procedures.
 
 ### Theming & Styling
 
